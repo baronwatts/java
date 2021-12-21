@@ -2,9 +2,9 @@
 Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. 
 
 
-1. object is an instance of class. Hasd state and behavior
-2. class - creates object and definesd different data types and methods. class doesn't consume space because it onlye creates and 	    defines pbjects.
-3. OOP is designed to help keep code organized as projects grow. - (hide/encapsulate data)
+1. object is an instance of class that has state and behavior
+2. class - creates object and defines different data types and methods. Class doesn't consume space because it onlye creates and defines objects.
+3. OOP is designed to help keep code organized as projects grow. - (hides/encapsulate data)
 4. procedural is basically step by step code and is not organized in any particular order. (global data that can be acces anywhere in the codebase)
 
 
@@ -13,18 +13,20 @@ Java is a general-purpose computer-programming language that is concurrent, clas
 procedural disadvantage = functions with alot of parameters
 advantage of oop = fewer perameters because they are defined in an object or class
 
-encapsulation - PROTECTING code from random access ( data and functions into single unit called objects)
+ENCAPULATION- PROTECTING code from random access ( data and functions into single unit called objects)
 
-abstraction (hide details and complexity and only show the essentuals) - makes the interface simplier and reduce the impact of change. code that doesn't affect anything outside their containing object. No leakage. you can delete methods and change parameters but it won't impact the rest of the applications code.
+ABSTRACTION -  Code that doesn't affect anything outside their containing object.
+(hide details and complexity and only show the essentials) - makes the interface simplier and reduce the impact of change.  
+No leakage. 
+You can delete methods and change parameters but it won't impact the rest of the applications code.
 
-inheritance elimantes redundant code
+INHERITANCE -  elimantes redundant code
 
-polymorphasism 
+POLYMORPHASISM - writing the same methods that act differently depending on the TYPE of object you are referencing
 poly - many
-morphasism - forms
+morph - forms
 gets rid of long if else and case statements (refactor)
 
-writing the same methods that act differently depending on the TYPE of object you are referencing
 
 
 
