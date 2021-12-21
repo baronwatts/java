@@ -6,6 +6,31 @@ Java is a general-purpose computer-programming language that is concurrent, clas
 2. class - creates object and definesd different data types and methods. class doesn't consume space because it onlye creates and 	    defines pbjects.
 3. OOP is designed to help keep code organized as projects grow. - (hide/encapsulate data)
 4. procedural is basically step by step code and is not organized in any particular order. (global data that can be acces anywhere in the codebase)
+
+
+
+
+procedural disadvantage = functions with alot of parameters
+advantage of oop = fewer perameters because they are defined in an object or class
+
+encapsulation - PROTECTING code from random access ( data and functions into single unit called objects)
+
+abstraction (hide details and complexity and only show the essentuals) - makes the interface simplier and reduce the impact of change. code that doesn't affect anything outside their containing object. No leakage. you can delete methods and change parameters but it won't impact the rest of the applications code.
+
+inheritance elimantes redundant code
+
+polymorphasism 
+poly - many
+morphasism - forms
+gets rid of long if else and case statements (refactor)
+
+writing the same methods that act differently depending on the TYPE of object you are referencing
+
+
+
+
+
+
 */
 
 
@@ -1370,7 +1395,7 @@ public class StringDemo {
 
 /*
 	52. Exception - is an object that wraps an error event that occurred within a method.
-		- Checked Exceptions - compiler enforces that you handle them explicitly. 
+		- Checked Exceptions - compiler looks for and checks the error and application won't run until it's fixed
     	- Unchecked Exceptions -  compiler does not enforce (check) that you handle them explicitly. (Errors and RuntimeExceptions)
     	- Errors - ignored at the time of compilation
 */
@@ -1430,6 +1455,7 @@ public class StringDemo {
 /*	54. Throw
 	-throws is used to postpone the handling of a checked exception and throw is used to invoke an exception explicitly. 
 	-One can throw an exception, either a newly instantiated one or an exception that you just caught, by using the throw keyword.
+	- can throw the erros to he JVM and allow the application to run
 */
 
 	import java.io.*;
@@ -1500,6 +1526,41 @@ class Testarray{
 
 /*
 	57. List, Set, Map
+
+	Array
+	- reserves meory so theri contents are adjacent
+	- array sizes are fixed
+	- arrays are access by their index
+	- memory is reserved
+
+	list/vector
+	- dynamically grow in size (flexibility)
+	- memory is not reserved at initialization
+	- often just wrappers around arrays
+
+	when array gets full they create a new one and copies the original arrays into the new one (DOUBLES IN SIZE WHEN FULL)
+
+
+	linked list
+	- no index
+	- not a wrapper for an array
+	- made up of nodes (a wrapper for the actual element, with a link to the next element)
+	- knows the memory address of it's neighbors
+	- don't have to be adjacent in memory
+
+	disadvantage
+	- have to search the entire list
+	- when adding /removing elements it has to stitch together it's neighboring elements
+
+	map/dictionary
+	- collection of nodes
+	- not aware of any other
+	- each node wraps the element, and tracks an assigned key for that element
+	- must return a node when a key is supplied
+
+
+
+
 */
 
 import java.util.*; // All the classes and interfaces are part of the util package
@@ -1549,18 +1610,55 @@ public class CollectionsDemo {
 
 
 /*
-58. SQL Statements
 
-DDL - Data Definition Language - CREATE, ALTER, DROP
-DML - Data Manipulation Language - SELECT, INSERT, UPDATE, DELETE
+SQL (structured Query Language)
+ - Managed by ANSI (American National Standards Institute)
+ - Databases often implement the SQL standard differently, or add to it
+ - RDMS (Relational dtabase management system) - Oracle Database, SCI Base, Microsoft Sequel Server, IBM DB2, MySQL
+
+
+58. SQL Statements  (Query)
+
+DDL - Data Definition Language - CREATE, ALTER, DROP (Defines database structure or Scheme)
+DML - Data Manipulation Language - SELECT, INSERT, UPDATE, DELETE (manages data within tables) **CRUD**
+TCL - Transaction Control Language - SAVEPOINT, ROLLBACK, COMMIT (manages how DML statements are executed)
+		- A group of SQL statements executed together. Either all will be exectued or none will.
+
 DCL - Data Control Language - GRANT, REVOKE
-TCL - Transaction Control Language - SAVEPOINT, ROLLBACK, COMMIT
 
 
-59. Joins
 
-    INNER JOIN
-    LEFT JOIN
-    RIGHT JOIN
-    FULL JOIN
+59. Joins - combines the result of two tables
+
+    INNER JOIN (return only records from both tables that match a condition)
+    LEFT JOIN (compares first & second table)
+    RIGHT JOIN (compares second and first table)
+    FULL JOIN (return all records form both tables)
+
+
+60. Relational Database
+	- uses tables
+	- columns (properties of each record) name, age, ect
+	- rows (itself is a record) Person
+
+
+
+61. Column datatypes
+	VARCHAR: text data of variable length
+	INTEGER: 32-bit, signed whole numbers
+	SMALLINT: 16-bit, signed whole numbers
+	NUMBER(n,d): Decimal numbers with limited significant figures  (5,2) stores up to 5 whole numbers and 2 decimal places
+	FLOAT: floating-point numbers
+	DATE: A day/month/year record (different form a timestamp)
+	TIMESTAMP: A combination of a date and timne
+	NULL: row value is empty and contains no data
+
+
+62. Table constraint - column attributes that restrict data
+		- Primary Key: column whos values uniquely identify each row (social security number)
+		- Composite Key: Two or more columns acting together as a primary key
+		- Foreign Key: a column in one table that references a column in another table (Makes it relationable)
+		- Unique Key: a column whose values must be unique in each row (email addresses)
+		- Not null: the column must have a value in each row
+		- check: the column values misyt meet some criteria (example: minimal length requirement)
 */
